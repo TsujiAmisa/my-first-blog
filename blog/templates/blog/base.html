@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="{% static '/css/blog.css' %}">
+        <link rel="stylesheet" href="https://fonts.gstatic.com"> 
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet" type="text/css"> 
+    </head>
+  
+    <body>
+        <div class="page-header-img">
+            <img src="{% static "img/cat.png" %}" width="100%" height="auto" alt="">
+            {% if user.is_authenticated %}
+                <p class="top-menu-name">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                <a href="{% url 'post_new' %}" class="top-menu-new"><span class="glyphicon glyphicon-plus"></span></a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+            {% else %}
+                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>    
+            {% endif %}
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        <div class="page-body-img">
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

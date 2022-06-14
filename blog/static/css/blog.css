@@ -1,0 +1,102 @@
+.page-header-img {
+    position: relative;
+}
+
+.page-header-img h1, h1 a,.page-header-img h1 a:visited .page-header-img h1 a:active{
+    position: absolute;
+    top: 20%;
+    bottom: 50%;
+    left: 5%;
+    right: 10%;
+    font-size: 250%;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+}
+
+.top-menu, .top-menu:active, .top-menu:visited {
+    position: absolute;
+    top: 15%;
+    right: 9%;
+    display: flex;
+    color: yellow;
+    font-size: 26pt;
+}
+
+.top-menu-new, .top-menu-new:active, .top-menu-new:visited {
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    display: flex;
+    color: yellow;
+    font-size: 26pt;
+}
+
+.top-menu-name, .top-menu-name:active, .top-menu-name:visited {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    display: flex;
+    color: white;
+    font-size: 10pt;
+}
+
+/*
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+*/
+
+.page-body-img{
+    position: relative;
+    background-image: url(/static/img/asi.png);
+    background-repeat: repeat;
+    background-size: 50% auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+}
+
+.page-body-img > .content{
+    margin-left: 40px;
+    top: 50px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Amatic SC', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a, .post h2 a:visited {
+    color: #000000;
+}
+
+.post-dtl-btn-ed {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+}
+
+.post-dtl-btn-publish{
+    left: 50px;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
